@@ -86,20 +86,20 @@ const main = async function() {
                     created_at: {
                         $dateToString: {
                             format: "%d/%m/%Y %H:%M",
-                            date: "$created_at" // Substitua isso pelo nome do seu campo de data
+                            date: "$created_at"
                         }
                     },
                     last_updated: {
                         $dateToString: {
                             format: "%d/%m/%Y %H:%M",
-                            date: "$last_updated" // Substitua isso pelo nome do seu campo de data
+                            date: "$last_updated"
                         }
                     }
                 }
             },
             {
                 $sort: {
-                    account_holder: 1 // Ordenar pelo campo 'account_holder' em ordem crescente (ascendente)
+                    account_holder: 1
                 }
             }
         ];
